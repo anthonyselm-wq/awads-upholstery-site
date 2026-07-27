@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Awad's Upholstery | Marine, Auto & Top Upholstery in Amelia, OH — Serving Cincinnati Since 1960</title>
-<meta name="description" content="Awad's Upholstery has repaired and restored boat seats, car interiors, and convertible tops from our Amelia, Ohio shop since 1960. Serving Cincinnati, Clermont County, Batavia, Milford, New Richmond & Anderson Township. Free estimates, walk-ins welcome.">
-<meta name="keywords" content="upholstery Amelia Ohio, boat upholstery Cincinnati, marine upholstery Clermont County, auto upholstery Amelia OH, convertible top replacement Cincinnati, car interior repair Batavia Ohio, boat seat repair New Richmond Ohio, upholstery shop near me">
+<meta name="description" content="Awad's Upholstery has repaired and restored boat seats, car interiors, convertible tops, and commercial seating from our Amelia, Ohio shop since 1960. Serving Cincinnati, Clermont County, Batavia, Milford, New Richmond & Anderson Township. Free estimates, walk-ins welcome.">
+<meta name="keywords" content="upholstery Amelia Ohio, boat upholstery Cincinnati, marine upholstery Clermont County, auto upholstery Amelia OH, convertible top replacement Cincinnati, car interior repair Batavia Ohio, boat seat repair New Richmond Ohio, commercial upholstery Cincinnati, restaurant booth reupholstery Ohio, upholstery shop near me">
 <link rel="canonical" href="https://www.awadsupholstery.com/">
 
 <meta property="og:type" content="business.business">
 <meta property="og:title" content="Awad's Upholstery — Marine, Automotive & Top Upholstery Since 1960">
-<meta property="og:description" content="Family-owned upholstery shop in Amelia, Ohio serving greater Cincinnati and Clermont County since 1960. Marine, automotive, and top upholstery — our reputation is tops.">
+<meta property="og:description" content="Family-owned upholstery shop in Amelia, Ohio serving greater Cincinnati and Clermont County since 1960. Marine, automotive, tops, and commercial upholstery — our reputation is tops.">
 <meta property="og:url" content="https://www.awadsupholstery.com/">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
   "@context": "https://schema.org",
   "@type": "AutoRepair",
   "name": "Awad's Upholstery",
-  "image": "https://static.wixstatic.com/media/b0d8b2_10ad260709984f36a9c3d94cbe4b9ce3.png",
+  "image": "https://www.awadsupholstery.com/logo.png",
   "@id": "https://www.awadsupholstery.com/",
   "url": "https://www.awadsupholstery.com/",
   "telephone": "+1-513-753-5234",
@@ -67,14 +67,14 @@
 
 <style>
   :root{
-    --navy:#14263A;
-    --navy-deep:#0D1B29;
+    --navy:#141414;
+    --navy-deep:#000000;
     --canvas:#F1E8D6;
     --canvas-light:#F8F2E6;
-    --tan:#B07A44;
-    --rust:#A63B2E;
-    --brass:#C6A15B;
-    --ink:#2A2620;
+    --tan:#8C3A35;
+    --rust:#C8262C;
+    --brass:#E2585B;
+    --ink:#211A1A;
     --display: 'Oswald', sans-serif;
     --body: 'PT Serif', serif;
     --mono: 'IBM Plex Mono', monospace;
@@ -181,7 +181,7 @@
   /* HERO */
   .hero{
     background:
-      radial-gradient(ellipse at 15% 20%, rgba(198,161,91,0.12), transparent 55%),
+      radial-gradient(ellipse at 15% 20%, rgba(226,88,91,0.12), transparent 55%),
       linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
     color:var(--canvas-light);
     padding:88px 0 70px;
@@ -191,7 +191,7 @@
   .hero::before{
     content:"";
     position:absolute; inset:0;
-    background-image: repeating-linear-gradient(115deg, rgba(198,161,91,0.05) 0px, rgba(198,161,91,0.05) 1px, transparent 1px, transparent 34px);
+    background-image: repeating-linear-gradient(115deg, rgba(226,88,91,0.05) 0px, rgba(226,88,91,0.05) 1px, transparent 1px, transparent 34px);
     pointer-events:none;
   }
   .hero-grid{
@@ -217,8 +217,8 @@
   }
   .cta-row{display:flex; gap:16px; flex-wrap:wrap;}
   .hero-panel{
-    border:1px solid rgba(198,161,91,0.4);
-    background:rgba(20,38,58,0.4);
+    border:1px solid rgba(226,88,91,0.4);
+    background:rgba(20,20,20,0.4);
     padding:34px 30px;
   }
   .hero-panel h3{color:var(--brass); font-size:1rem; margin-bottom:18px; letter-spacing:0.08em;}
@@ -235,13 +235,13 @@
   .hero-stat-list li b{color:var(--canvas-light); font-weight:600;}
 
   /* TRUST STRIP */
-  .trust{background:var(--canvas-light); border-bottom:1px solid rgba(20,38,58,0.1);}
+  .trust{background:var(--canvas-light); border-bottom:1px solid rgba(20,20,20,0.1);}
   .trust-grid{
     display:grid; grid-template-columns:repeat(4,1fr);
     padding:34px 0;
   }
   .trust-item{
-    text-align:center; padding:0 18px; border-left:1px solid rgba(20,38,58,0.12);
+    text-align:center; padding:0 18px; border-left:1px solid rgba(20,20,20,0.12);
   }
   .trust-item:first-child{border-left:none;}
   .trust-item .num{font-family:var(--display); font-size:1.9rem; color:var(--rust); font-weight:600;}
@@ -254,22 +254,25 @@
 
   /* SERVICES */
   .services{background:var(--canvas);}
-  .service-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:30px;}
+  .service-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:24px;}
   .service-card{
     background:var(--canvas-light);
-    border:1px solid rgba(20,38,58,0.14);
+    border:1px solid rgba(20,20,20,0.14);
     position:relative;
     padding:0 0 30px;
     transition:transform .2s ease, box-shadow .2s ease;
   }
-  .service-card:hover{transform:translateY(-6px); box-shadow:0 18px 30px -18px rgba(20,38,58,0.35);}
+  .service-card:hover{transform:translateY(-6px); box-shadow:0 18px 30px -18px rgba(20,20,20,0.35);}
   .service-card .stitch{margin-bottom:0;}
   .service-media{
-    height:150px; display:flex; align-items:center; justify-content:center;
-    background:var(--navy); color:var(--brass);
+    height:190px; overflow:hidden;
+    background:var(--navy);
   }
-  .service-media svg{width:52px; height:52px;}
-  .service-body{padding:26px 26px 0;}
+  .service-media img{width:100%; height:100%; object-fit:cover; transition:transform .3s ease;}
+  .service-card:hover .service-media img{transform:scale(1.05);}
+  .service-media.icon{display:flex; align-items:center; justify-content:center; color:var(--brass);}
+  .service-media.icon svg{width:52px; height:52px;}
+  .service-body{padding:22px 22px 0;}
   .service-body .eyebrow{margin-bottom:8px;}
   .service-body h3{font-size:1.25rem; margin-bottom:10px;}
   .service-body p{font-size:0.96rem; color:#4a4436; margin-bottom:16px;}
@@ -279,7 +282,7 @@
   .about{background:var(--navy); color:var(--canvas-light); position:relative; overflow:hidden;}
   .about-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:center;}
   .about-frame{
-    border:1px solid rgba(198,161,91,0.5);
+    border:1px solid rgba(226,88,91,0.5);
     padding:14px;
     position:relative;
   }
@@ -298,7 +301,7 @@
   .about .eyebrow{color:var(--brass);}
   .about p{font-family:var(--body); color:#D9CFB8; margin-bottom:16px; font-size:1.03rem;}
   .about-founder{
-    margin-top:24px; padding-top:20px; border-top:1px dashed rgba(198,161,91,0.4);
+    margin-top:24px; padding-top:20px; border-top:1px dashed rgba(226,88,91,0.4);
     font-family:var(--mono); font-size:0.8rem; color:var(--brass);
   }
 
@@ -332,35 +335,39 @@
   .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px;}
   .info-block h3{font-size:1.1rem; margin-bottom:14px; color:var(--navy);}
   .info-line{
-    display:flex; gap:14px; padding:14px 0; border-bottom:1px solid rgba(20,38,58,0.14);
+    display:flex; gap:14px; padding:14px 0; border-bottom:1px solid rgba(20,20,20,0.14);
     font-family:var(--body); font-size:1rem;
   }
   .info-line .lbl{font-family:var(--mono); font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--tan); min-width:90px; padding-top:2px;}
   .hours-table{width:100%; margin-top:6px;}
-  .hours-table td{font-family:var(--mono); font-size:0.85rem; padding:8px 0; border-bottom:1px dashed rgba(20,38,58,0.14);}
+  .hours-table td{font-family:var(--mono); font-size:0.85rem; padding:8px 0; border-bottom:1px dashed rgba(20,20,20,0.14);}
   .hours-table td:last-child{text-align:right; color:var(--navy); font-weight:600;}
 
   form{display:flex; flex-direction:column; gap:16px;}
   form label{font-family:var(--mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--navy); margin-bottom:6px; display:block;}
   form input, form textarea{
     width:100%; padding:13px 14px; font-family:var(--body); font-size:0.98rem;
-    border:1px solid rgba(20,38,58,0.3); background:var(--canvas-light); color:var(--ink);
+    border:1px solid rgba(20,20,20,0.3); background:var(--canvas-light); color:var(--ink);
   }
   form input:focus, form textarea:focus{outline:2px solid var(--brass); outline-offset:1px;}
   form textarea{min-height:120px; resize:vertical;}
   .form-note{font-family:var(--mono); font-size:0.72rem; color:var(--tan);}
 
-  footer{background:var(--navy-deep); color:#B9C2CC; padding:50px 0 26px;}
+  footer{background:var(--navy-deep); color:#C9C2BE; padding:50px 0 26px;}
   .footer-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:40px; margin-bottom:36px;}
   .footer-logo{font-family:var(--display); color:var(--canvas-light); font-size:1.2rem; text-transform:uppercase; margin-bottom:12px;}
-  footer p{font-family:var(--body); font-size:0.92rem; color:#93A0AC; margin-bottom:8px;}
+  footer p{font-family:var(--body); font-size:0.92rem; color:#A69C96; margin-bottom:8px;}
   footer h4{font-family:var(--mono); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--brass); margin-bottom:14px;}
   footer ul li{margin-bottom:9px; font-family:var(--body); font-size:0.9rem;}
   footer ul li a:hover{color:var(--canvas-light);}
   .footer-bottom{
-    border-top:1px solid rgba(185,194,204,0.15); padding-top:20px;
+    border-top:1px solid rgba(226,88,91,0.15); padding-top:20px;
     display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
-    font-family:var(--mono); font-size:0.72rem; color:#6E7A85;
+    font-family:var(--mono); font-size:0.72rem; color:#7A716C;
+  }
+
+  @media (max-width:1100px){
+    .service-grid{grid-template-columns:repeat(2,1fr);}
   }
 
   @media (max-width:920px){
@@ -379,7 +386,7 @@
 <header>
   <div class="nav-row">
     <a href="#top" class="logo">
-      <span class="logo-badge"><img src="https://static.wixstatic.com/media/b0d8b2_10ad260709984f36a9c3d94cbe4b9ce3.png" alt="Awad's Upholstery logo"></span>
+      <span class="logo-badge"><img src="images/logo-badge.png" alt="Awad's Upholstery logo"></span>
       <span class="logo-text">AWAD'S UPHOLSTERY<span>AMELIA, OHIO · EST. 1960</span></span>
     </a>
     <nav>
@@ -402,7 +409,7 @@
     <div>
       <p class="eyebrow" style="color:var(--brass);">Marine · Automotive · Tops — Amelia, OH</p>
       <h1>Upholstery Done Right In <em>Greater Cincinnati</em> Since 1960</h1>
-      <p class="lede">Three generations of boat seats re-stitched, muscle car interiors rebuilt, and convertible tops replaced from the same corner of St. Rt. 125 &amp; St. Rt. 132 in Amelia, Ohio.</p>
+      <p class="lede">Three generations of boat seats re-stitched, car interiors rebuilt, convertible tops replaced, and commercial seating restored from the same corner of St. Rt. 125 &amp; St. Rt. 132 in Amelia, Ohio.</p>
       <div class="cta-row">
         <a href="tel:+15137535234" class="btn btn-rust">Call for a Free Estimate</a>
         <a href="#services" class="btn btn-outline">See Our Work</a>
@@ -415,7 +422,7 @@
     </div>
     <div class="hero-panel" style="text-align:center;">
       <span class="logo-badge" style="width:110px; height:110px; margin:0 auto 20px; box-shadow:0 0 0 3px var(--brass);">
-        <img src="https://static.wixstatic.com/media/b0d8b2_10ad260709984f36a9c3d94cbe4b9ce3.png" alt="Awad's Upholstery logo">
+        <img src="images/logo-badge.png" alt="Awad's Upholstery logo">
       </span>
       <h3>Since</h3>
       <div class="est-since">1960</div>
@@ -435,7 +442,7 @@
 <section class="trust">
   <div class="wrap trust-grid">
     <div class="trust-item"><div class="num">65+</div><div class="cap">Years in Amelia, Ohio</div></div>
-    <div class="trust-item"><div class="num">3</div><div class="cap">Core Trades — Marine, Auto, Tops</div></div>
+    <div class="trust-item"><div class="num">4</div><div class="cap">Core Trades — Marine, Auto, Tops, Commercial</div></div>
     <div class="trust-item"><div class="num">1</div><div class="cap">Same Corner Since 1960</div></div>
     <div class="trust-item"><div class="num">100%</div><div class="cap">Guaranteed Workmanship</div></div>
   </div>
@@ -445,15 +452,13 @@
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">What We Stitch</p>
-      <h2>Marine, Automotive &amp; Top Upholstery</h2>
-      <p>From pontoon seats on the Ohio River to bucket seats in a Clermont County garage, every job leaves the shop stitched to last.</p>
+      <h2>Marine, Automotive, Tops &amp; Commercial Upholstery</h2>
+      <p>From pontoon seats on the Ohio River to booth seating in a Clermont County restaurant, every job leaves the shop stitched to last.</p>
     </div>
     <div class="service-grid">
 
       <div class="service-card">
-        <div class="service-media">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 17s3-2 10-2 10 2 10 2M4 14l1-8h14l1 8M9 6V3h6v3"/></svg>
-        </div>
+        <div class="service-media"><img src="images/marine-boat.jpg" alt="Boat seat and marine upholstery repair at Awad's Upholstery"></div>
         <div class="stitch navy"></div>
         <div class="service-body">
           <p class="eyebrow">Marine</p>
@@ -464,28 +469,37 @@
       </div>
 
       <div class="service-card">
-        <div class="service-media">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 13l2-6a2 2 0 012-1h10a2 2 0 012 1l2 6M3 13v5a1 1 0 001 1h1a1 1 0 001-1v-1h12v1a1 1 0 001 1h1a1 1 0 001-1v-5M3 13h18"/><circle cx="7" cy="16" r="0.5"/><circle cx="17" cy="16" r="0.5"/></svg>
-        </div>
+        <div class="service-media"><img src="images/automotive-interior.jpg" alt="Car interior seat upholstery restoration at Awad's Upholstery"></div>
         <div class="stitch navy"></div>
         <div class="service-body">
           <p class="eyebrow">Automotive</p>
           <h3>Car &amp; Truck Interior Upholstery</h3>
-          <p>Seat upholstery, headliners, door panels, and full muscle car interior restorations — trusted by Amelia and Cincinnati drivers since the 1960s.</p>
+          <p>Seat upholstery, headliners, door panels, and full interior restorations — trusted by Amelia and Cincinnati drivers since 1960.</p>
           <p class="kw">Auto interiors, Batavia &amp; Milford OH</p>
         </div>
       </div>
 
       <div class="service-card">
-        <div class="service-media">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 18V9a8 8 0 0116 0v9M4 18h16M4 18v2M20 18v2"/></svg>
-        </div>
+        <div class="service-media"><img src="images/tops-convertible.jpg" alt="Convertible top replacement at Awad's Upholstery in Amelia, Ohio"></div>
         <div class="stitch navy"></div>
         <div class="service-body">
           <p class="eyebrow">Tops</p>
           <h3>Convertible &amp; Truck Tops</h3>
           <p>Convertible top replacement, truck bed tops, and canvas work fitted and sewn in-house for a clean, factory-tight finish.</p>
           <p class="kw">Convertible tops, Greater Cincinnati</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-media icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 10h16M4 10a2 2 0 00-2 2v7h2m18-9a2 2 0 012 2v7h-2M6 19v2m12-2v2M6 10V6a2 2 0 012-2h8a2 2 0 012 2v4M2 19h20"/></svg>
+        </div>
+        <div class="stitch navy"></div>
+        <div class="service-body">
+          <p class="eyebrow">Commercial</p>
+          <h3>Restaurant &amp; Commercial Upholstery</h3>
+          <p>Restaurant booth and chair reupholstery, waiting room and office seating, and other commercial vinyl work built to hold up to daily use.</p>
+          <p class="kw">Commercial upholstery, Cincinnati &amp; Clermont County</p>
         </div>
       </div>
 
@@ -496,14 +510,14 @@
 <section id="about" class="about">
   <div class="wrap about-grid">
     <div class="about-frame">
-      <img src="https://static.wixstatic.com/media/b0d8b2_36fed3d09250b2396e0246b561e8c6e0.jpg" alt="Awad's Upholstery shop, Amelia Ohio, founded 1960">
+      <img src="images/marine-boat.jpg" alt="Inside the Awad's Upholstery shop in Amelia, Ohio">
       <div class="stamp">Our Reputation<br>Is Tops!</div>
     </div>
     <div>
       <p class="eyebrow">Est. 1960 · Amelia, Ohio</p>
-      <h2>From the Muscle Car Age to Today</h2>
-      <p>Awad's Upholstery was founded in 1960 by Edmund L. Awad on the east side of Cincinnati, at the intersection of St. Rt. 125 and St. Rt. 132. Through the muscle car age of the '60s and '70s, into the '80s and '90s, and every boating and driving season since, we've kept Amelia and the greater Cincinnati area covered.</p>
-      <p>We're now located at 3413 St. Rt. 132 — right across the street from our original spot — so you'll still find us exactly where you expect us. Whether it's spring boat season or winter car and truck time, our shop is set up to handle it.</p>
+      <h2>Six Decades on the Same Corner</h2>
+      <p>Awad's Upholstery was founded in 1960 by Edmund L. Awad on the east side of Cincinnati, at the intersection of St. Rt. 125 and St. Rt. 132. Through six decades of changing cars, boats, and businesses, we've kept Amelia and the greater Cincinnati area covered.</p>
+      <p>We're now located at 3413 St. Rt. 132 — right across the street from our original spot — so you'll still find us exactly where you expect us. Whether it's spring boat season, winter car and truck time, or a restaurant refreshing its booths, our shop is set up to handle it.</p>
       <div class="about-founder">Founded by Edmund L. Awad, 1960 · Same intersection, Amelia OH, ever since</div>
     </div>
   </div>
@@ -592,11 +606,11 @@
     <div class="footer-grid">
       <div>
         <div class="footer-logo" style="display:flex; align-items:center; gap:12px;">
-          <span class="logo-badge" style="width:44px; height:44px;"><img src="https://static.wixstatic.com/media/b0d8b2_10ad260709984f36a9c3d94cbe4b9ce3.png" alt="Awad's Upholstery logo"></span>
+          <span class="logo-badge" style="width:44px; height:44px;"><img src="images/logo-badge.png" alt="Awad's Upholstery logo"></span>
           Awad's Upholstery
         </div>
         <p>3413 St. Rt. 132, Amelia, OH 45102</p>
-        <p>Marine, automotive, and top upholstery serving Amelia and greater Cincinnati since 1960.</p>
+        <p>Marine, automotive, top, and commercial upholstery serving Amelia and greater Cincinnati since 1960.</p>
       </div>
       <div>
         <h4>Services</h4>
@@ -604,6 +618,7 @@
           <li><a href="#services">Marine Upholstery</a></li>
           <li><a href="#services">Automotive Interiors</a></li>
           <li><a href="#services">Tops &amp; Canvas</a></li>
+          <li><a href="#services">Commercial Upholstery</a></li>
         </ul>
       </div>
       <div>
