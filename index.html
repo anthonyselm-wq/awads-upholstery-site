@@ -16,6 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 
 <script type="application/ld+json">
 {
@@ -65,327 +66,6 @@
 }
 </script>
 
-<style>
-  :root{
-    --navy:#141414;
-    --navy-deep:#000000;
-    --canvas:#F1E8D6;
-    --canvas-light:#F8F2E6;
-    --tan:#8C3A35;
-    --rust:#C8262C;
-    --brass:#E2585B;
-    --ink:#211A1A;
-    --display: 'Oswald', sans-serif;
-    --body: 'PT Serif', serif;
-    --mono: 'IBM Plex Mono', monospace;
-  }
-
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:var(--body);
-    color:var(--ink);
-    background:var(--canvas);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  img{max-width:100%; display:block;}
-  a{color:inherit; text-decoration:none;}
-  ul{list-style:none;}
-  h1,h2,h3,h4{font-family:var(--display); text-transform:uppercase; letter-spacing:0.02em; color:var(--navy);}
-  .eyebrow{
-    font-family:var(--mono);
-    font-size:0.72rem;
-    letter-spacing:0.18em;
-    text-transform:uppercase;
-    color:var(--rust);
-    font-weight:600;
-  }
-  .wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    font-family:var(--display);
-    text-transform:uppercase;
-    letter-spacing:0.04em;
-    font-size:0.92rem;
-    padding:14px 26px;
-    border:2px solid transparent;
-    cursor:pointer;
-    transition:all .18s ease;
-  }
-  .btn-rust{background:var(--rust); color:var(--canvas-light); border-color:var(--rust);}
-  .btn-rust:hover{background:transparent; color:var(--rust);}
-  .btn-outline{background:transparent; color:var(--canvas-light); border-color:var(--canvas-light);}
-  .btn-outline:hover{background:var(--canvas-light); color:var(--navy);}
-  .btn-navy{background:var(--navy); color:var(--canvas-light); border-color:var(--navy);}
-  .btn-navy:hover{background:transparent; color:var(--navy);}
-
-  /* stitch divider — the signature motif */
-  .stitch{
-    width:100%;
-    height:14px;
-    background-repeat:repeat-x;
-    background-position:center;
-    background-size:26px 14px;
-    background-image:
-      linear-gradient(90deg, transparent 46%, currentColor 46%, currentColor 54%, transparent 54%),
-      linear-gradient(90deg, currentColor 0, currentColor 100%);
-    background-size:26px 14px, 100% 1px;
-    background-position:center, center;
-  }
-  .stitch.navy{color:var(--navy);}
-  .stitch.brass{color:var(--brass);}
-  .stitch.rust{color:var(--rust);}
-
-  /* HEADER */
-  header{
-    position:sticky; top:0; z-index:50;
-    background:var(--navy);
-    border-bottom:3px solid var(--brass);
-  }
-  .nav-row{
-    display:flex; align-items:center; justify-content:space-between;
-    padding:16px 28px;
-    max-width:1180px; margin:0 auto;
-  }
-  .logo{
-    display:flex; align-items:center; gap:12px;
-    font-family:var(--display); font-weight:700; font-size:1.35rem;
-    color:var(--canvas-light); letter-spacing:0.02em; line-height:1;
-  }
-  .logo-badge{
-    width:52px; height:52px; border-radius:50%;
-    background:var(--canvas-light);
-    display:flex; align-items:center; justify-content:center;
-    padding:3px; flex-shrink:0;
-    box-shadow:0 0 0 2px var(--brass);
-  }
-  .logo-badge img{width:100%; height:100%; object-fit:contain; border-radius:50%;}
-  .logo-text{display:flex; flex-direction:column;}
-  .logo-text span{font-family:var(--mono); font-size:0.6rem; letter-spacing:0.22em; color:var(--brass); margin-top:4px; font-weight:500;}
-  nav ul{display:flex; gap:30px; align-items:center;}
-  nav a{
-    font-family:var(--display); font-size:0.85rem; letter-spacing:0.05em;
-    text-transform:uppercase; color:var(--canvas-light); opacity:.88;
-    padding:6px 2px; border-bottom:2px solid transparent;
-  }
-  nav a:hover{opacity:1; border-color:var(--brass);}
-  .nav-phone{
-    font-family:var(--mono); color:var(--brass); font-size:0.9rem; font-weight:600;
-    display:flex; align-items:center; gap:8px;
-  }
-  .menu-toggle{display:none; background:none; border:none; color:var(--canvas-light); font-size:1.6rem; cursor:pointer;}
-
-  /* HERO */
-  .hero{
-    background:
-      radial-gradient(ellipse at 15% 20%, rgba(226,88,91,0.12), transparent 55%),
-      linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
-    color:var(--canvas-light);
-    padding:88px 0 70px;
-    position:relative;
-    overflow:hidden;
-  }
-  .hero::before{
-    content:"";
-    position:absolute; inset:0;
-    background-image: repeating-linear-gradient(115deg, rgba(226,88,91,0.05) 0px, rgba(226,88,91,0.05) 1px, transparent 1px, transparent 34px);
-    pointer-events:none;
-  }
-  .hero-grid{
-    display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;
-    position:relative; z-index:1;
-  }
-  .hero h1{
-    color:var(--canvas-light);
-    font-size:clamp(2.2rem, 4.6vw, 3.6rem);
-    line-height:1.06;
-    margin:16px 0 20px;
-  }
-  .hero h1 em{font-style:normal; color:var(--brass);}
-  .hero p.lede{
-    font-family:var(--body); font-style:italic; font-size:1.15rem;
-    color:#D9CFB8; max-width:52ch; margin-bottom:30px;
-  }
-  .hero-badges{display:flex; gap:14px; margin-top:34px; flex-wrap:wrap;}
-  .badge{
-    font-family:var(--mono); font-size:0.72rem; letter-spacing:0.06em;
-    border:1px solid rgba(241,232,214,0.3); padding:8px 14px;
-    color:#D9CFB8; text-transform:uppercase;
-  }
-  .cta-row{display:flex; gap:16px; flex-wrap:wrap;}
-  .hero-panel{
-    border:1px solid rgba(226,88,91,0.4);
-    background:rgba(20,20,20,0.4);
-    padding:34px 30px;
-  }
-  .hero-panel h3{color:var(--brass); font-size:1rem; margin-bottom:18px; letter-spacing:0.08em;}
-  .hero-panel .est-since{
-    font-family:var(--display); font-weight:700; font-size:4.2rem; line-height:1;
-    color:var(--canvas-light); margin-bottom:6px;
-  }
-  .hero-panel .est-since + p{font-family:var(--mono); font-size:0.78rem; color:var(--brass); letter-spacing:0.1em; margin-bottom:26px;}
-  .hero-stat-list{display:flex; flex-direction:column; gap:14px;}
-  .hero-stat-list li{
-    display:flex; justify-content:space-between; font-family:var(--mono); font-size:0.82rem;
-    color:#D9CFB8; border-bottom:1px dashed rgba(241,232,214,0.2); padding-bottom:10px;
-  }
-  .hero-stat-list li b{color:var(--canvas-light); font-weight:600;}
-
-  /* TRUST STRIP */
-  .trust{background:var(--canvas-light); border-bottom:1px solid rgba(20,20,20,0.1);}
-  .trust-grid{
-    display:grid; grid-template-columns:repeat(4,1fr);
-    padding:34px 0;
-  }
-  .trust-item{
-    text-align:center; padding:0 18px; border-left:1px solid rgba(20,20,20,0.12);
-  }
-  .trust-item:first-child{border-left:none;}
-  .trust-item .num{font-family:var(--display); font-size:1.9rem; color:var(--rust); font-weight:600;}
-  .trust-item .cap{font-family:var(--mono); font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--navy); opacity:.75; margin-top:4px;}
-
-  section{padding:86px 0;}
-  .section-head{max-width:640px; margin-bottom:52px;}
-  .section-head h2{font-size:clamp(1.7rem,3vw,2.5rem); margin:12px 0 14px;}
-  .section-head p{font-family:var(--body); color:#4a4436; font-size:1.05rem;}
-
-  /* SERVICES */
-  .services{background:var(--canvas);}
-  .service-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:24px;}
-  .service-card{
-    background:var(--canvas-light);
-    border:1px solid rgba(20,20,20,0.14);
-    position:relative;
-    padding:0 0 30px;
-    transition:transform .2s ease, box-shadow .2s ease;
-  }
-  .service-card:hover{transform:translateY(-6px); box-shadow:0 18px 30px -18px rgba(20,20,20,0.35);}
-  .service-card .stitch{margin-bottom:0;}
-  .service-media{
-    height:190px; overflow:hidden;
-    background:var(--navy);
-  }
-  .service-media img{width:100%; height:100%; object-fit:cover; transition:transform .3s ease;}
-  .service-card:hover .service-media img{transform:scale(1.05);}
-  .service-media.icon{display:flex; align-items:center; justify-content:center; color:var(--brass);}
-  .service-media.icon svg{width:52px; height:52px;}
-  .service-body{padding:22px 22px 0;}
-  .service-body .eyebrow{margin-bottom:8px;}
-  .service-body h3{font-size:1.25rem; margin-bottom:10px;}
-  .service-body p{font-size:0.96rem; color:#4a4436; margin-bottom:16px;}
-  .service-body .kw{font-family:var(--mono); font-size:0.72rem; color:var(--tan); letter-spacing:0.02em;}
-
-  /* ABOUT */
-  .about{background:var(--navy); color:var(--canvas-light); position:relative; overflow:hidden;}
-  .about-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:center;}
-  .about-frame{
-    border:1px solid rgba(226,88,91,0.5);
-    padding:14px;
-    position:relative;
-  }
-  .about-frame img{filter:grayscale(15%) contrast(1.05);}
-  .stamp{
-    position:absolute; top:-18px; right:-18px;
-    background:var(--rust); color:var(--canvas-light);
-    font-family:var(--display); font-weight:700; text-transform:uppercase;
-    font-size:0.92rem; letter-spacing:0.05em;
-    padding:14px 16px; transform:rotate(6deg);
-    border:2px solid var(--canvas-light);
-    box-shadow:0 8px 18px rgba(0,0,0,0.35);
-    text-align:center; line-height:1.3;
-  }
-  .about h2{color:var(--canvas-light);}
-  .about .eyebrow{color:var(--brass);}
-  .about p{font-family:var(--body); color:#D9CFB8; margin-bottom:16px; font-size:1.03rem;}
-  .about-founder{
-    margin-top:24px; padding-top:20px; border-top:1px dashed rgba(226,88,91,0.4);
-    font-family:var(--mono); font-size:0.8rem; color:var(--brass);
-  }
-
-  /* SERVICE AREA */
-  .area{background:var(--canvas-light);}
-  .area-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start;}
-  .chip-cloud{display:flex; flex-wrap:wrap; gap:10px;}
-  .chip{
-    font-family:var(--mono); font-size:0.82rem;
-    border:1px solid var(--navy); color:var(--navy);
-    padding:9px 16px;
-  }
-  .chip.hub{background:var(--navy); color:var(--canvas-light); font-weight:600;}
-  .area-copy p{font-family:var(--body); color:#4a4436; margin-bottom:16px; font-size:1.02rem;}
-  .mile-note{
-    margin-top:22px; font-family:var(--mono); font-size:0.78rem; color:var(--tan);
-    border-left:3px solid var(--brass); padding-left:14px;
-  }
-
-  /* CTA BANNER */
-  .cta-banner{
-    background:var(--rust); color:var(--canvas-light);
-    padding:60px 0; text-align:center;
-  }
-  .cta-banner h2{color:var(--canvas-light); font-size:clamp(1.6rem,3.4vw,2.3rem); margin-bottom:14px;}
-  .cta-banner p{font-family:var(--body); font-style:italic; margin-bottom:28px; opacity:.92;}
-  .cta-banner .cta-row{justify-content:center;}
-
-  /* CONTACT */
-  .contact{background:var(--canvas);}
-  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px;}
-  .map-frame{
-    grid-column:1 / -1; margin-top:16px;
-    border:1px solid rgba(226,88,91,0.4); padding:10px;
-    background:var(--canvas-light);
-  }
-  .map-frame iframe{display:block; width:100%; height:360px; border:0;}
-  .info-block h3{font-size:1.1rem; margin-bottom:14px; color:var(--navy);}
-  .info-line{
-    display:flex; gap:14px; padding:14px 0; border-bottom:1px solid rgba(20,20,20,0.14);
-    font-family:var(--body); font-size:1rem;
-  }
-  .info-line .lbl{font-family:var(--mono); font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--tan); min-width:90px; padding-top:2px;}
-  .hours-table{width:100%; margin-top:6px;}
-  .hours-table td{font-family:var(--mono); font-size:0.85rem; padding:8px 0; border-bottom:1px dashed rgba(20,20,20,0.14);}
-  .hours-table td:last-child{text-align:right; color:var(--navy); font-weight:600;}
-
-  form{display:flex; flex-direction:column; gap:16px;}
-  form label{font-family:var(--mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--navy); margin-bottom:6px; display:block;}
-  form input, form textarea{
-    width:100%; padding:13px 14px; font-family:var(--body); font-size:0.98rem;
-    border:1px solid rgba(20,20,20,0.3); background:var(--canvas-light); color:var(--ink);
-  }
-  form input:focus, form textarea:focus{outline:2px solid var(--brass); outline-offset:1px;}
-  form textarea{min-height:120px; resize:vertical;}
-  .form-note{font-family:var(--mono); font-size:0.72rem; color:var(--tan);}
-
-  footer{background:var(--navy-deep); color:#C9C2BE; padding:50px 0 26px;}
-  .footer-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:40px; margin-bottom:36px;}
-  .footer-logo{font-family:var(--display); color:var(--canvas-light); font-size:1.2rem; text-transform:uppercase; margin-bottom:12px;}
-  footer p{font-family:var(--body); font-size:0.92rem; color:#A69C96; margin-bottom:8px;}
-  footer h4{font-family:var(--mono); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--brass); margin-bottom:14px;}
-  footer ul li{margin-bottom:9px; font-family:var(--body); font-size:0.9rem;}
-  footer ul li a:hover{color:var(--canvas-light);}
-  .footer-bottom{
-    border-top:1px solid rgba(226,88,91,0.15); padding-top:20px;
-    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
-    font-family:var(--mono); font-size:0.72rem; color:#7A716C;
-  }
-
-  @media (max-width:1100px){
-    .service-grid{grid-template-columns:repeat(2,1fr);}
-  }
-
-  @media (max-width:920px){
-    nav ul, .nav-phone{display:none;}
-    .menu-toggle{display:block;}
-    .hero-grid, .about-grid, .area-grid, .contact-grid{grid-template-columns:1fr;}
-    .service-grid{grid-template-columns:1fr;}
-    .trust-grid{grid-template-columns:repeat(2,1fr); row-gap:24px;}
-    .trust-item:nth-child(3){border-left:none;}
-    section{padding:60px 0;}
-  }
-</style>
 </head>
 <body>
 
@@ -397,7 +77,15 @@
     </a>
     <nav>
       <ul>
-        <li><a href="#services">Services</a></li>
+        <li class="has-dropdown">
+          <a href="#services">Services</a>
+          <ul class="dropdown">
+            <li><a href="marine-upholstery.html">Marine Upholstery</a></li>
+            <li><a href="automotive-upholstery.html">Automotive Upholstery</a></li>
+            <li><a href="convertible-truck-tops.html">Convertible &amp; Truck Tops</a></li>
+            <li><a href="commercial-upholstery.html">Commercial Upholstery</a></li>
+          </ul>
+        </li>
         <li><a href="#about">About</a></li>
         <li><a href="#area">Service Area</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -464,48 +152,52 @@
     <div class="service-grid">
 
       <div class="service-card">
-        <div class="service-media"><img src="images/marine-boat.jpg" alt="Boat seat and marine upholstery repair at Awad's Upholstery"></div>
+        <a href="marine-upholstery.html"><div class="service-media"><img src="images/marine-boat.jpg" alt="Boat seat and marine upholstery repair at Awad's Upholstery"></div></a>
         <div class="stitch navy"></div>
         <div class="service-body">
           <p class="eyebrow">Marine</p>
-          <h3>Boat Seat &amp; Marine Upholstery</h3>
+          <h3><a href="marine-upholstery.html">Boat Seat &amp; Marine Upholstery</a></h3>
           <p>Boat seat repair, pontoon and ski boat cushions, marine vinyl replacement, and canvas biminis for boaters on the Ohio River and East Fork Lake.</p>
           <p class="kw">Serving Cincinnati &amp; New Richmond boaters</p>
+          <a href="marine-upholstery.html" class="card-link">Learn More →</a>
         </div>
       </div>
 
       <div class="service-card">
-        <div class="service-media"><img src="images/automotive-interior.jpg" alt="Car interior seat upholstery restoration at Awad's Upholstery"></div>
+        <a href="automotive-upholstery.html"><div class="service-media"><img src="images/automotive-interior.jpg" alt="Car interior seat upholstery restoration at Awad's Upholstery"></div></a>
         <div class="stitch navy"></div>
         <div class="service-body">
           <p class="eyebrow">Automotive</p>
-          <h3>Car &amp; Truck Interior Upholstery</h3>
+          <h3><a href="automotive-upholstery.html">Car &amp; Truck Interior Upholstery</a></h3>
           <p>Seat upholstery, headliners, door panels, and full interior restorations — trusted by Amelia and Cincinnati drivers since 1960.</p>
           <p class="kw">Auto interiors, Batavia &amp; Milford OH</p>
+          <a href="automotive-upholstery.html" class="card-link">Learn More →</a>
         </div>
       </div>
 
       <div class="service-card">
-        <div class="service-media"><img src="images/tops-convertible.jpg" alt="Convertible top replacement at Awad's Upholstery in Amelia, Ohio"></div>
+        <a href="convertible-truck-tops.html"><div class="service-media"><img src="images/tops-convertible.jpg" alt="Convertible top replacement at Awad's Upholstery in Amelia, Ohio"></div></a>
         <div class="stitch navy"></div>
         <div class="service-body">
           <p class="eyebrow">Tops</p>
-          <h3>Convertible &amp; Truck Tops</h3>
+          <h3><a href="convertible-truck-tops.html">Convertible &amp; Truck Tops</a></h3>
           <p>Convertible top replacement, truck bed tops, and canvas work fitted and sewn in-house for a clean, factory-tight finish.</p>
           <p class="kw">Convertible tops, Greater Cincinnati</p>
+          <a href="convertible-truck-tops.html" class="card-link">Learn More →</a>
         </div>
       </div>
 
       <div class="service-card">
-        <div class="service-media icon">
+        <a href="commercial-upholstery.html"><div class="service-media icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 10h16M4 10a2 2 0 00-2 2v7h2m18-9a2 2 0 012 2v7h-2M6 19v2m12-2v2M6 10V6a2 2 0 012-2h8a2 2 0 012 2v4M2 19h20"/></svg>
-        </div>
+        </div></a>
         <div class="stitch navy"></div>
         <div class="service-body">
           <p class="eyebrow">Commercial</p>
-          <h3>Restaurant &amp; Commercial Upholstery</h3>
+          <h3><a href="commercial-upholstery.html">Restaurant &amp; Commercial Upholstery</a></h3>
           <p>Restaurant booth and chair reupholstery, waiting room and office seating, and other commercial vinyl work built to hold up to daily use.</p>
           <p class="kw">Commercial upholstery, Cincinnati &amp; Clermont County</p>
+          <a href="commercial-upholstery.html" class="card-link">Learn More →</a>
         </div>
       </div>
 
@@ -624,10 +316,10 @@
       <div>
         <h4>Services</h4>
         <ul>
-          <li><a href="#services">Marine Upholstery</a></li>
-          <li><a href="#services">Automotive Interiors</a></li>
-          <li><a href="#services">Tops &amp; Canvas</a></li>
-          <li><a href="#services">Commercial Upholstery</a></li>
+          <li><a href="marine-upholstery.html">Marine Upholstery</a></li>
+          <li><a href="automotive-upholstery.html">Automotive Interiors</a></li>
+          <li><a href="convertible-truck-tops.html">Tops &amp; Canvas</a></li>
+          <li><a href="commercial-upholstery.html">Commercial Upholstery</a></li>
         </ul>
       </div>
       <div>
