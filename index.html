@@ -333,6 +333,12 @@
   /* CONTACT */
   .contact{background:var(--canvas);}
   .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px;}
+  .map-frame{
+    grid-column:1 / -1; margin-top:16px;
+    border:1px solid rgba(226,88,91,0.4); padding:10px;
+    background:var(--canvas-light);
+  }
+  .map-frame iframe{display:block; width:100%; height:360px; border:0;}
   .info-block h3{font-size:1.1rem; margin-bottom:14px; color:var(--navy);}
   .info-line{
     display:flex; gap:14px; padding:14px 0; border-bottom:1px solid rgba(20,20,20,0.14);
@@ -597,6 +603,9 @@
         <button type="submit" class="btn btn-navy" style="align-self:flex-start;">Send Message</button>
         <p class="form-note">Opens your email client addressed to toaw1960@gmail.com — or just call 513-753-5234.</p>
       </form>
+    </div>
+    <div class="map-frame">
+      <iframe src="https://www.google.com/maps?q=3413+St.+Rt.+132,+Amelia,+OH+45102&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to Awad's Upholstery, 3413 St. Rt. 132, Amelia, OH 45102"></iframe>
     </div>
   </div>
 </section>
